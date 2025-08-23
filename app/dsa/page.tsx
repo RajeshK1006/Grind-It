@@ -9,7 +9,8 @@ const page = () => {
         {/* Section 1 */}
         <div className="flex flex-col justify-center items-center w-full">
           <h3 className="text-2xl md:text-3xl font-mono mb-5 text-center">
-            Let's Learn Array - since it's the traditional way to start
+            Let&apos;s Learn Array - since it&apos;s the traditional way to
+            start
           </h3>
           <DSAContainer />
         </div>
@@ -17,7 +18,7 @@ const page = () => {
         {/* Section 2 */}
         <div className="flex flex-col justify-center items-center w-full">
           <h3 className="text-2xl md:text-3xl font-mono mb-5 text-center">
-            Let's Learn Binary Search - A smart way to search your data
+            Let&apos;s Learn Binary Search - A smart way to search your data
           </h3>
           <BinarySearchContainer />
         </div>
@@ -25,7 +26,8 @@ const page = () => {
         {/* Section 3 */}
         <div className="flex flex-col justify-center items-center w-full">
           <h3 className="text-2xl md:text-3xl font-mono mb-5 text-center">
-            Let's Learn Array - since it's the traditional worship of DSA
+            Let&apos;s Learn Array - since it&apos;s the traditional worship of
+            DSA
           </h3>
           <DSAContainer />
         </div>
@@ -33,7 +35,8 @@ const page = () => {
         {/* Section 4 */}
         <div className="flex flex-col justify-center items-center w-full">
           <h3 className="text-2xl md:text-3xl font-mono mb-5 text-center">
-            Let's Learn Array - since it's the traditional worship of DSA
+            Let&apos;s Learn Array - since it&apos;s the traditional worship of
+            DSA
           </h3>
           <DSAContainer />
         </div>
