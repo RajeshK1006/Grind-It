@@ -10,7 +10,7 @@ import {
   CardDescription,
 } from "@/components/ui/card";
 
-const AboutMe = () => {
+const About = () => {
   const [shapes, setShapes] = useState<
     {
       size: number;
@@ -50,11 +50,11 @@ const AboutMe = () => {
       description:
         "Designed scalable, clean, and OOP-friendly architectures. Low-level designs with flair!",
       colSpan: 1,
-      rowSpan: 2,
+      rowSpan: 1,
       color: "bg-pink-100",
     },
     {
-      title: "Projects Playground 🚀",
+      title: "Myself",
       description:
         "Built full-stack projects using Java, Spring Boot, Next.js, and MySQL. Watch me code in action!",
       colSpan: 1,
@@ -62,12 +62,20 @@ const AboutMe = () => {
       color: "bg-purple-100",
     },
     {
-      title: "Profiles & Achievements 🌟",
+      title: "Profiles 🌟",
       description:
         "Follow me on LinkedIn, GitHub, LeetCode, HackerRank to see my journey & code magic.",
       colSpan: 2,
       rowSpan: 1,
       color: "bg-yellow-100",
+    },
+    {
+      title: "Projects Playground 🚀",
+      description:
+        "Built full-stack projects using Java, Spring Boot, Next.js, and MySQL. Watch me code in action!",
+      colSpan: 1,
+      rowSpan: 1,
+      color: "bg-purple-100",
     },
     {
       title: "Why I Stand Out ✨",
@@ -134,11 +142,11 @@ const AboutMe = () => {
                 <CardDescription className="text-gray-800">
                   {feature.description}
                 </CardDescription>
-                {feature.title === "Profiles & Achievements 🌟" && (
+                {feature.title === "Profiles 🌟" && (
                   <ul className="mt-2 space-y-1 text-indigo-600">
                     <li>
                       <Link
-                        href="https://www.linkedin.com/in/yourprofile"
+                        href="https://www.linkedin.com/in/rajesh-k-39665b28a/"
                         target="_blank"
                         className="hover:underline"
                       >
@@ -147,7 +155,7 @@ const AboutMe = () => {
                     </li>
                     <li>
                       <Link
-                        href="https://github.com/yourusername"
+                        href="https://github.com/RajeshK1006"
                         target="_blank"
                         className="hover:underline"
                       >
@@ -156,7 +164,7 @@ const AboutMe = () => {
                     </li>
                     <li>
                       <Link
-                        href="https://leetcode.com/yourusername"
+                        href="https://leetcode.com/u/GfQ29zhl9g/"
                         target="_blank"
                         className="hover:underline"
                       >
@@ -195,11 +203,11 @@ const AboutMe = () => {
                 <CardDescription className="text-gray-800">
                   {feature.description}
                 </CardDescription>
-                {feature.title === "Profiles & Achievements 🌟" && (
+                {feature.title === "Profiles 🌟" && (
                   <ul className="mt-2 space-y-1 text-indigo-600">
                     <li>
                       <Link
-                        href="https://www.linkedin.com/in/yourprofile"
+                        href="https://www.linkedin.com/in/rajesh-k-39665b28a/"
                         target="_blank"
                         className="hover:underline"
                       >
@@ -208,7 +216,7 @@ const AboutMe = () => {
                     </li>
                     <li>
                       <Link
-                        href="https://github.com/yourusername"
+                        href="https://github.com/RajeshK1006"
                         target="_blank"
                         className="hover:underline"
                       >
@@ -217,7 +225,7 @@ const AboutMe = () => {
                     </li>
                     <li>
                       <Link
-                        href="https://leetcode.com/yourusername"
+                        href="https://leetcode.com/u/GfQ29zhl9g/"
                         target="_blank"
                         className="hover:underline"
                       >
@@ -261,4 +269,4 @@ const AboutMe = () => {
   );
 };
 
-export default AboutMe;
+export default About;

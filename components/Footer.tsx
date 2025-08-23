@@ -68,21 +68,21 @@ const Footer = () => {
 
           <div className="flex gap-4 text-gray-900/80 text-lg mt-2 sm:mt-0">
             <Link
-              href="https://github.com/yourusername"
+              href="https://github.com/RajeshK1006"
               target="_blank"
               className="hover:text-indigo-600 transition"
             >
               GitHub
             </Link>
             <Link
-              href="https://www.linkedin.com/in/yourprofile"
+              href="https://www.linkedin.com/in/rajesh-k-39665b28a/"
               target="_blank"
               className="hover:text-indigo-600 transition"
             >
               LinkedIn
             </Link>
             <Link
-              href="https://leetcode.com/yourusername"
+              href="https://leetcode.com/u/GfQ29zhl9g/"
               target="_blank"
               className="hover:text-indigo-600 transition"
             >

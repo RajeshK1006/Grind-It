@@ -31,43 +31,43 @@ const Hero = () => {
 
   const features = [
     {
-      title: "DSA Wizardry 🧙‍♂️",
-      desc: "Solved 400+ algorithm problems across Arrays, Strings, Trees, Graphs, DP, and more.",
+      title: "Structured DSA Roadmap 🧩",
+      desc: "Step-by-step coverage of Arrays, Strings, Trees, Graphs, DP, and more with curated problems.",
       row: 1,
       col: 2,
       color: "bg-indigo-100",
     },
     {
-      title: "LLD & System Mojo ⚡",
-      desc: "Designed scalable, clean, and OOP-friendly architectures. Low-level designs with flair!",
+      title: "LLD & System Design ⚡",
+      desc: "Hands-on practice with low-level and system design problems to crack real-world interviews.",
       row: 2,
       col: 1,
       color: "bg-pink-100",
     },
     {
-      title: "OOPs Playground 🚀",
-      desc: "Mastered OOP principles and SOLID designs while building multiple projects.",
+      title: "OOPs & Core Java 🚀",
+      desc: "Solid understanding of OOP principles, design patterns, and Java fundamentals for interviews.",
       row: 2,
       col: 1,
       color: "bg-purple-100",
     },
     {
-      title: "Blogs & Tutorials 📚",
-      desc: "Shared structured guides and tutorials to help peers learn efficiently.",
+      title: "Guided Tutorials 📚",
+      desc: "Easy-to-follow guides, explanations, and notes to make tough concepts simple.",
       row: 1,
       col: 1,
       color: "bg-yellow-100",
     },
     {
-      title: "Why I Stand Out ✨",
-      desc: "Consistency, creativity, and problem-solving—building projects that scale, mastering concepts, and sharing knowledge.",
+      title: "Interview Prep Hub ✨",
+      desc: "From coding rounds to system design—everything you need in one place.",
       row: 1,
       col: 2,
       color: "bg-teal-100",
     },
     {
       title: "Self-Paced Learning 🏃",
-      desc: "Learn and practice at your own convenience with structured plans and resources.",
+      desc: "Flexible practice plans and structured paths so you learn at your own speed.",
       row: 1,
       col: 3,
       color: "bg-orange-100",
@@ -120,7 +120,7 @@ const Hero = () => {
 
         {/* Right Column */}
         <div className="w-full md:w-1/2 flex flex-col justify-center md:justify-end relative z-0 mb-10 md:mb-0">
-          <p className="text-indigo-200 font-mono font-bold text-4xl mb-4 text-center md:text-right animate-pulse">
+          <p className="text-indigo-200 font-mono font-bold text-7xl mb-4 text-center md:text-right animate-pulse">
             🎉 Where code meets chaos… literally floating! 🚀
           </p>
           <div className="relative w-3/4 h-96">
@@ -148,7 +148,7 @@ const Hero = () => {
         {features.map((feature, idx) => (
           <div
             key={idx}
-            className={`p-8 rounded-lg shadow-sm hover:shadow-lg hover:scale-105 transition-transform duration-300 col-span-${feature.col} row-span-${feature.row} flex flex-col justify-center ${feature.color}`}
+            className={`p-8 rounded-lg shadow-sm transform transition duration-300 hover:scale-110 hover:shadow-2xl cursor-pointer col-span-${feature.col} row-span-${feature.row} flex flex-col justify-center ${feature.color}`}
           >
             <h3 className="text-xl font-bold mb-2 text-indigo-700">
               {feature.title}
