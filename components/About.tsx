@@ -2,6 +2,8 @@
 
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import gojo from "@/public/gojo.jpg";
+import Image from "next/image";
 import {
   Card,
   CardContent,
@@ -55,12 +57,35 @@ const About = () => {
     },
     {
       title: "Myself",
-      description:
-        "Built full-stack projects using Java, Spring Boot, Next.js, and MySQL. Watch me code in action!",
+      description: (
+        <div>
+          <div className="w-full h-full flex mb-8 items-center justify-center">
+            <Image
+              src={gojo}
+              alt="Profile"
+              className="w-full h-full object-cover rounded-2xl shadow-md"
+            />
+          </div>
+
+          <ul className="space-y-3 mb-5">
+            <li>💻 Freelancer Software Developer</li>
+            <li>🎮 Former PUBG grinder → Now FC2025 player</li>
+            <li>😅 Non-aesthetic, cat guy with simple vibes</li>
+            <li>📺 Loves binge-watching TVD (The Vampire Diaries)</li>
+          </ul>
+          <div className="flex justify-center text-center">
+            <p className="text-2xl">
+              Mentality:
+              <span className="block font-semibold mt-3">Nah! I'd win</span>
+            </p>
+          </div>
+        </div>
+      ),
       colSpan: 1,
       rowSpan: 3,
       color: "bg-purple-100",
     },
+
     {
       title: "Profiles 🌟",
       description:
@@ -75,7 +100,7 @@ const About = () => {
         "Built full-stack projects using Java, Spring Boot, Next.js, and MySQL. Watch me code in action!",
       colSpan: 1,
       rowSpan: 1,
-      color: "bg-purple-100",
+      color: "bg-red-100",
     },
     {
       title: "Why I Stand Out ✨",
