@@ -143,21 +143,34 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Bottom Bento Box with modern colors */}
-      <div className="container mx-auto px-6 mt-16 relative z-10">
-        <div className="grid grid-cols-3 grid-rows-3 gap-6">
-          {features.map((feature, idx) => (
-            <div
-              key={idx}
-              className={`p-8 rounded-lg shadow-sm hover:shadow-lg hover:scale-105 transition-transform duration-300 col-span-${feature.col} row-span-${feature.row} flex flex-col justify-center ${feature.color}`}
-            >
-              <h3 className="text-xl font-bold mb-2 text-indigo-700">
-                {feature.title}
-              </h3>
-              <p className="text-gray-800">{feature.desc}</p>
-            </div>
-          ))}
-        </div>
+      {/* Bottom Bento Box for large screens */}
+      <div className="hidden lg:grid xl:grid container mx-auto px-6 mt-16 relative z-10 grid-cols-3 grid-rows-3 gap-6">
+        {features.map((feature, idx) => (
+          <div
+            key={idx}
+            className={`p-8 rounded-lg shadow-sm hover:shadow-lg hover:scale-105 transition-transform duration-300 col-span-${feature.col} row-span-${feature.row} flex flex-col justify-center ${feature.color}`}
+          >
+            <h3 className="text-xl font-bold mb-2 text-indigo-700">
+              {feature.title}
+            </h3>
+            <p className="text-gray-800">{feature.desc}</p>
+          </div>
+        ))}
+      </div>
+
+      {/* Bottom Bento Box for medium and small screens */}
+      <div className="grid lg:hidden container mx-auto px-6 mt-16 relative z-10 grid-cols-1 gap-6">
+        {features.map((feature, idx) => (
+          <div
+            key={idx}
+            className={`p-6 rounded-lg shadow-sm hover:shadow-lg hover:scale-105 transition-transform duration-300 flex flex-col justify-center ${feature.color} animate-fade-in`}
+          >
+            <h3 className="text-lg font-bold mb-2 text-indigo-700">
+              {feature.title}
+            </h3>
+            <p className="text-gray-800">{feature.desc}</p>
+          </div>
+        ))}
       </div>
 
       {/* Floating funky shapes */}

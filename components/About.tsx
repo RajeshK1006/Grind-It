@@ -114,7 +114,8 @@ const AboutMe = () => {
           About the Creator
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-4 md:grid-cols-4 gap-6">
+        {/* Large screens bento */}
+        <div className="hidden lg:grid xl:grid grid-cols-4 gap-6">
           {bentoFeatures.map((feature, idx) => (
             <Card
               key={idx}
@@ -123,6 +124,67 @@ const AboutMe = () => {
               )} transform transition duration-300 hover:scale-110 hover:shadow-2xl cursor-pointer ${
                 feature.color
               }`}
+            >
+              <CardHeader>
+                <CardTitle className="text-lg font-bold text-indigo-700">
+                  {feature.title}
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-gray-800">
+                  {feature.description}
+                </CardDescription>
+                {feature.title === "Profiles & Achievements 🌟" && (
+                  <ul className="mt-2 space-y-1 text-indigo-600">
+                    <li>
+                      <Link
+                        href="https://www.linkedin.com/in/yourprofile"
+                        target="_blank"
+                        className="hover:underline"
+                      >
+                        LinkedIn
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="https://github.com/yourusername"
+                        target="_blank"
+                        className="hover:underline"
+                      >
+                        GitHub
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="https://leetcode.com/yourusername"
+                        target="_blank"
+                        className="hover:underline"
+                      >
+                        LeetCode
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="https://www.hackerrank.com/yourusername"
+                        target="_blank"
+                        className="hover:underline"
+                      >
+                        HackerRank
+                      </Link>
+                    </li>
+                  </ul>
+                )}
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        {/* Small/medium screens 1x1 */}
+        <div className="grid lg:hidden grid-cols-1 gap-6">
+          {bentoFeatures.map((feature, idx) => (
+            <Card
+              key={idx}
+              className={`transform transition duration-300 hover:scale-105 hover:shadow-lg cursor-pointer p-4 ${feature.color} animate-fade-in`}
             >
               <CardHeader>
                 <CardTitle className="text-lg font-bold text-indigo-700">
