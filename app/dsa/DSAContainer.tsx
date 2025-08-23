@@ -1,4 +1,3 @@
-import section1 from "@/constants/dsa/section1";
 import arrayAdvance from "@/constants/dsa/arrays/arraysAdvance";
 import arrayIntermediate from "@/constants/dsa/arrays/arraysIntermediate";
 import arrayBeginner from "@/constants/dsa/arrays/arraysBeginner";
