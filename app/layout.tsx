@@ -1,6 +1,11 @@
+// app/layout.tsx
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "sonner"; // Sonner notifications
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import { Analytics } from "@vercel/analytics/react"; // ✅ Vercel Analytics
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,15 +24,31 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased w-full overflow-x-hidden bg-gray-50 text-gray-900`}
       >
-        {children}
+        <div className="min-w-full flex flex-col min-h-screen">
+          <header>
+            <Navbar />
+          </header>
+
+          <main className="flex-grow">{children}</main>
+
+          <footer>
+            <Footer />
+          </footer>
+
+          {/* Sonner Toaster */}
+          <Toaster position="top-center" />
+
+          {/* Vercel Analytics */}
+          <Analytics />
+        </div>
       </body>
     </html>
   );
