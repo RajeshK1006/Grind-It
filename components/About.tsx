@@ -69,6 +69,7 @@ const About = () => {
 
           <ul className="space-y-3 mb-5">
             <li>💻 Freelancer Software Developer</li>
+            <li>😎 Eating Biscuits and cooking softwares</li>
             <li>🎮 Former PUBG grinder → Now FC2025 player</li>
             <li>😅 Non-aesthetic, cat guy with simple vibes</li>
             <li>📺 Loves binge-watching TVD (The Vampire Diaries)</li>
@@ -76,7 +77,9 @@ const About = () => {
           <div className="flex justify-center text-center">
             <p className="text-2xl">
               Mentality:
-              <span className="block font-semibold mt-3">Nah! I'd win</span>
+              <span className="block font-semibold mt-3">
+                Nah! I&apos;d win
+              </span>
             </p>
           </div>
         </div>
