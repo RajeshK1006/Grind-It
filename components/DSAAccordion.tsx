@@ -54,7 +54,7 @@ const DSAAccordion: React.FC<DSAAccordionProps> = ({ sectionName, items }) => {
     <Accordion
       type="single"
       collapsible
-      className="w-full p-4 shadow-md rounded-xl mx-auto"
+      className="w-full p-4 shadow-xl rounded-xl mx-auto"
     >
       <AccordionItem
         value={sectionName}

@@ -1,6 +1,7 @@
 import React from "react";
-import DSAContainer from "./DSAContainer";
-import BinarySearchContainer from "./BinarySearchContainer";
+import DSAContainer from "./containers/DSAContainer";
+import BinarySearchContainer from "./containers/BinarySearchContainer";
+import SortingContainer from "./containers/SortingContainer";
 
 const page = () => {
   return (
@@ -26,10 +27,10 @@ const page = () => {
         {/* Section 3 */}
         <div className="flex flex-col justify-center items-center w-full">
           <h3 className="text-2xl md:text-3xl font-mono mb-5 text-center">
-            Let&apos;s Learn Array - since it&apos;s the traditional worship of
-            DSA
+            Let&apos;s Arrange the data as we need - Based on height orderwise
+            lol!
           </h3>
-          <DSAContainer />
+          <SortingContainer />
         </div>
 
         {/* Section 4 */}
