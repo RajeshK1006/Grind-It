@@ -17,7 +17,7 @@ const SortingContainer = () => {
 
   return (
     <div className="container mx-auto">
-      <div className="flex flex-col w-full  gap-6 p-2 mt-2  rounded-4xl  shadow-muted-foreground">
+      <div className="flex flex-col w-full  gap-6 p-2 mt-2  rounded-4xl  shadow-muted-foreground ">
         {sections.map((sec, idx) => (
           <DSAAccordion
             key={idx}

@@ -54,7 +54,7 @@ const DSAAccordion: React.FC<DSAAccordionProps> = ({ sectionName, items }) => {
     <Accordion
       type="single"
       collapsible
-      className="w-full p-4 shadow-xl rounded-xl mx-auto"
+      className="w-full p-4 shadow-xl rounded-xl mx-auto  hover:bg-indigo-200 hover:scale-110 duration-300 transition"
     >
       <AccordionItem
         value={sectionName}
@@ -105,6 +105,7 @@ const DSAAccordion: React.FC<DSAAccordionProps> = ({ sectionName, items }) => {
                   </TableCell>
                   <TableCell>
                     <Checkbox
+                      className="border-1 border-black"
                       checked={!!completed[item.id]}
                       onCheckedChange={() => handleCheckboxChange(item.id)}
                     />
