@@ -57,16 +57,17 @@ export default function LLDAccordion({ items }: LLDAccordionProps) {
                       <h4 className="text-base font-semibold mb-2">
                         Solutions
                       </h4>
+                      <p className="my-2"> (click the filenames)</p>
                       {Object.entries(item.solution).map(
                         ([file, lines], idx) => (
                           <Collapsible
                             key={idx}
-                            className="mb-2 hover:scale-105 "
+                            className="mb-2 duration-300 transition-all"
                           >
-                            <CollapsibleTrigger className="flex items-center justify-between w-full p-2 border rounded-md cursor-pointer hover:bg-blue-300">
-                              <span className="font-mono ">{file}</span>
+                            <CollapsibleTrigger className="flex items-center justify-between w-full p-2 border rounded-md cursor-pointer duration-300 transition">
+                              <span className="font-mono">{file}</span>
                             </CollapsibleTrigger>
-                            <CollapsibleContent className="p-2 bg-gray-50 rounded-md">
+                            <CollapsibleContent className="p-2 bg-gray-900 text-gray-300 rounded-md overflow-x-scroll">
                               <MarkdownRenderer
                                 content={
                                   "```java\n" + lines.join("\n") + "\n```"
@@ -79,7 +80,12 @@ export default function LLDAccordion({ items }: LLDAccordionProps) {
                     </div>
 
                     <div className="flex space-x-2">
-                      <Button asChild variant="outline" size="sm">
+                      <Button
+                        asChild
+                        variant="outline"
+                        size="sm"
+                        className="duration-300 transition hover:scale-125 hover:bg-indigo-200 "
+                      >
                         <a
                           href={item.blogLink}
                           target="_blank"
@@ -88,7 +94,12 @@ export default function LLDAccordion({ items }: LLDAccordionProps) {
                           Blog / Solution
                         </a>
                       </Button>
-                      <Button asChild variant="default" size="sm">
+                      <Button
+                        asChild
+                        variant="default"
+                        size="sm"
+                        className="hover:scale-125"
+                      >
                         <a
                           href={item.tryItLink}
                           target="_blank"

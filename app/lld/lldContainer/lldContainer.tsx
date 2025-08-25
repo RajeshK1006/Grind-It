@@ -2,15 +2,20 @@
 
 import LLDAccordion from "@/components/LLDAccordion";
 import { lldData } from "@/constants/lld/questions/data";
+
 export default function LLDContainer() {
   return (
-    <div className="w-full max-w-4xl mx-auto py-8">
-      <div className="flex justify-center items-center my-10 ">
-        <h3 className="font-mono font-extrabold text-3xl">
+    <div className="w-full px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
+      <div className="flex justify-center items-center my-6 sm:my-10 text-center">
+        <h3 className="font-mono font-extrabold text-xl sm:text-2xl md:text-3xl lg:text-4xl">
           LLD Questions for Top PBC Interviews
         </h3>
       </div>
-      <LLDAccordion items={lldData.items} />
+
+      {/* Container adjusts for all screen sizes */}
+      <div className="w-full max-w-2xl sm:max-w-3xl lg:max-w-4xl mx-auto">
+        <LLDAccordion items={lldData.items} />
+      </div>
     </div>
   );
 }
