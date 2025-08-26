@@ -431,7 +431,27 @@ export const lldData: LLDAccordionProps = {
     },
     "blogLink": "https://www.geeksforgeeks.org/design-tinyurl-system/",
     "tryItLink": "https://www.jdoodle.com/online-java-compiler/"
-  }
+    },
+  {
+  "id": 7,
+  "title": "Design a Simple In-Memory Cache with TTL",
+  "description": "Design a caching layer that stores data temporarily and automatically evicts expired entries based on TTL (time-to-live). The cache should check for data before querying the actual database, reducing DB hits. If the requested data is not in the cache, it should fetch from the DB, store it in the cache, and then return to the user.",
+  "keyModules": [
+    "App (Main class to test the cache)",
+    "Cache (Handles storing, retrieving, and evicting data)",
+    "CacheData (Wraps cached value and timestamp)",
+    "Db (Simulated Database)"
+  ],
+  "solution": {
+    "App.java": ["import java.util.*;\n\npublic class App {\n    public static void main(String[] args) {\n        Db db = new Db();\n        Cache cache = new Cache();\n\n        System.out.println(cache.getData(\"1\", db));\n        System.out.println(cache.getData(\"2\", db));\n        System.out.println(cache.getData(\"3\", db));\n\n        // The system first checks cache\n        // If data is present, returns it directly\n        // Else fetches from DB, stores it in cache, and returns it\n    }\n}"],
+    "CacheData.java": ["public class CacheData {\n    public String value;\n    public long time;\n\n    public CacheData(String val, long time) {\n        this.value = val;\n        this.time = time;\n    }\n}"],
+    "Cache.java": ["import java.util.*;\n\npublic class Cache {\n    private final HashMap<String, CacheData> c;\n    long ttl;\n\n    public Cache() {\n        c = new HashMap<>();\n        ttl = 30000L; // 30 seconds\n    }\n\n    public String getData(String key, Db db) {\n        removeExpiredData();\n        if (c.containsKey(key)) {\n            return c.get(key).value;\n        }\n\n        String value = db.getData(key);\n        CacheData newEntry = new CacheData(value, System.currentTimeMillis());\n        c.put(key, newEntry);\n        return value;\n    }\n\n    private void removeExpiredData() {\n        long now = System.currentTimeMillis();\n        Iterator<Map.Entry<String, CacheData>> it = c.entrySet().iterator();\n        while (it.hasNext()) {\n            Map.Entry<String, CacheData> entry = it.next();\n            if (now - entry.getValue().time > ttl) {\n                it.remove();\n            }\n        }\n        System.out.println(\"done removing the expired ones\");\n    }\n}"],
+    "Db.java": ["import java.util.*;\n\npublic class Db {\n    private static HashMap<String, String> data;\n\n    public Db() {\n        this.data = new HashMap<>();\n        data.put(\"1\", \"Rajesh\");\n        data.put(\"2\", \"Sanjay\");\n        data.put(\"3\", \"Kumar\");\n        data.put(\"4\", \"Kavitha\");\n    }\n\n    public String getData(String key) {\n        return data.get(key);\n    }\n\n    public String setData(String key, String val) {\n        data.put(key, val);\n        return \"success\";\n    }\n}"]
+  },
+  "blogLink": "https://medium.com/system-designing/cache-design-and-implementation-strategies-6d8aa72a44c6",
+  "tryItLink": "https://www.jdoodle.com/online-java-compiler/"
+}
+
 ]
 
 };

@@ -1,9 +1,9 @@
 "use client";
 
-import LLDAccordion from "@/components/LLDAccordion";
-import { lldData } from "@/constants/lld/questions/data";
+import OopAccordion from "@/components/OopAccordion";
+import { oopData } from "@/constants/oops/oopsData";
 
-export default function LLDContainer() {
+export default function OopContainer() {
   return (
     <div className="w-full px-4 sm:px-6 lg:px-8 py-6 sm:py-8 min-h-screen">
       <div className="flex justify-center items-center my-6 sm:my-10 text-center">
@@ -14,7 +14,7 @@ export default function LLDContainer() {
 
       {/* Container adjusts for all screen sizes */}
       <div className="w-full max-w-2xl sm:max-w-3xl lg:max-w-4xl mx-auto">
-        <LLDAccordion items={lldData.items} />
+        <OopAccordion items={oopData.items} />
       </div>
     </div>
   );
